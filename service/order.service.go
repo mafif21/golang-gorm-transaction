@@ -13,7 +13,8 @@ type OrderService interface {
 }
 
 type OrderServiceImpl struct {
-	txProvider config.TransactionProvider
+	txProvider      config.TransactionProvider
+	OrderRepository repositories.OrderRepository
 }
 
 func NewOrderServiceImpl(txProvider config.TransactionProvider) OrderService {
